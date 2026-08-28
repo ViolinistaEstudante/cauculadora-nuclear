@@ -1,84 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energia de Fusão Nuclear do Hidrogênio Pesado</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energia de Fusão Nuclear do Hidrogênio Pesado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Energia de Fusão Nuclear do Hidrogênio Pesado</h1>
+
+<div class="field"></div>
+
+<header>
+    <div class="header-inner">
+        <span class="brand"><span class="brand-dot"></span>Fusão&nbsp;D–D</span>
         <nav>
             <ul>
-                <li><a href="#o-que-e">O que é?</a></li>
+                <li><a href="#o-que-e">O que é</a></li>
                 <li><a href="#vantagens">Vantagens</a></li>
-                <li><a href="#comparacao">Comparação</a></li>
-                <li><a href="#interatividade">Experimente!</a></li>
+                <li><a href="#comparacao">Escala</a></li>
+                <li><a href="#interatividade">Console</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <section id="o-que-e">
-            <h2>O que é Fusão Nuclear?</h2>
-            <p>A fusão nuclear é um processo onde núcleos atômicos leves se combinam para formar um núcleo mais pesado, liberando uma grande quantidade de energia. Ela ocorre no Sol, que funde hidrogênio em seu núcleo, e em armamentos nucleares atuais. É o caso da Tsar Bomba, o explosivo mais potente a detonar da história.</p>
-        </section>
+<main>
 
-        <section id="vantagens">
-            <h2>Vantagens da Fusão do Hidrogênio Pesado</h2>
-            <ul>
-                <li>Energia abundante e limpa.</li>
-                <li>Menor produção de resíduos radioativos.</li>
-                <li>Combustível disponível em grande quantidade.</li>
-            </ul>
-        </section>
+    <section class="hero">
+        <div class="hero-text">
+            <p class="eyebrow">Deutério · ²H + ²H</p>
+            <h1>A energia que acende<br>as estrelas</h1>
+            <p class="hero-sub">Dois núcleos de hidrogênio pesado se aproximam, vencem a repulsão coulombiana e se fundem — liberando, em um único evento, a mesma física que queima no núcleo do Sol.</p>
+            <a href="#interatividade" class="cta">Calcular energia liberada ↓</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+            <svg viewBox="0 0 320 320" class="fusion-svg">
+                <circle cx="160" cy="160" r="120" class="orbit-ring"/>
+                <circle cx="160" cy="160" r="70" class="orbit-ring orbit-ring--inner"/>
+                <g class="nucleus-a">
+                    <circle r="14" class="proton"/>
+                    <circle cx="16" r="14" class="neutron"/>
+                </g>
+                <g class="nucleus-b">
+                    <circle r="14" class="proton"/>
+                    <circle cx="-16" r="14" class="neutron"/>
+                </g>
+                <circle cx="160" cy="160" r="6" class="flash"/>
+            </svg>
+        </div>
+    </section>
 
-        <section id="comparacao">
-            <h2>Comparação com Explosões Nucleares</h2>
-            <p>Veja como a energia liberada na fusão nuclear se compara a explosões nucleares conhecidas:</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Teste</th>
-                        <th>Energia Liberada (TNT)</th>
-                        <th>Energia (Joules)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Tsar Bomba</td>
-                        <td>50 Megatons</td>
-                        <td>2,1 × 10<sup>15</sup> J</td>
-                    </tr>
-                    <tr>
-                        <td>Teste Trinity</td>
-                        <td>20 Kilotons</td>
-                        <td>8,4 × 10<sup>13</sup> J</td>
-                    </tr>
-                    <tr>
-                        <td>Fusão Nuclear (1 núcleo de Deutério)</td>
-                        <td>—</td>
-                        <td>3,2 × 10<sup>-19</sup> J</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><strong>Nota:</strong> Para igualar a energia da Tsar Bomba, seriam necessários aproximadamente <strong>6,56 × 10<sup>34</sup></strong> núcleos de deutério.</p>
-        </section>
-        
-        <section id="interatividade">
-            <h2>Experimente!</h2>
-            <p>Calcule a energia liberada na fusão de hidrogênio pesado:</p>
-            <input type="number" id="nucleo-input" placeholder="Número de núcleos de Deutério" min="1">
-            <button onclick="calcularEnergia()">Calcular Energia</button>
-            <p id="resultado"></p>
-        </section>
-    </main>
+    <section id="o-que-e" class="card">
+        <span class="tag">Conceito</span>
+        <h2>O que é fusão nuclear?</h2>
+        <p>A fusão nuclear é o processo em que núcleos atômicos leves se combinam para formar um núcleo mais pesado, liberando uma quantidade enorme de energia por conta do defeito de massa convertido segundo E = mc². É a reação que ocorre no interior do Sol, onde o hidrogênio é fundido sob pressão e temperatura extremas, e também a reação usada nos armamentos termonucleares mais potentes já detonados — como a Tsar Bomba, o maior explosivo da história.</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 - Energia de Fusão Nuclear </p>
-    </footer>
+    <section id="vantagens" class="card">
+        <span class="tag">Por que importa</span>
+        <h2>Vantagens da fusão do hidrogênio pesado</h2>
+        <div class="advantages">
+            <div class="advantage">
+                <div class="advantage-icon">
+                    <svg viewBox="0 0 40 40"><path d="M20 4 L26 18 L36 18 L27 26 L31 38 L20 30 L9 38 L13 26 L4 18 L14 18 Z" class="icon-shape"/></svg>
+                </div>
+                <h3>Energia abundante e limpa</h3>
+                <p>Nenhuma emissão de gases de efeito estufa durante a reação.</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage-icon">
+                    <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="6" class="icon-shape"/><circle cx="20" cy="20" r="16" class="icon-ring"/></svg>
+                </div>
+                <h3>Baixo resíduo radioativo</h3>
+                <p>Muito menor produção de rejeitos de longa duração que a fissão.</p>
+            </div>
+            <div class="advantage">
+                <div class="advantage-icon">
+                    <svg viewBox="0 0 40 40"><path d="M10 30 L18 12 L22 22 L30 8" class="icon-shape icon-line"/></svg>
+                </div>
+                <h3>Combustível abundante</h3>
+                <p>Deutério pode ser extraído diretamente da água do mar.</p>
+            </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="comparacao" class="card">
+        <span class="tag">Ordens de grandeza</span>
+        <h2>Comparação com explosões nucleares</h2>
+        <p>A energia de um único núcleo de deutério é insignificante isoladamente — o que muda tudo é a escala. Veja a diferença, em joules, numa escala logarítmica:</p>
+
+        <div class="scale">
+            <div class="scale-row">
+                <span class="scale-label">1 núcleo de D</span>
+                <div class="scale-track"><div class="scale-bar" style="--w:2%"></div></div>
+                <span class="scale-value">3,2 × 10<sup>-19</sup> J</span>
+            </div>
+            <div class="scale-row">
+                <span class="scale-label">Teste Trinity</span>
+                <div class="scale-track"><div class="scale-bar scale-bar--mid" style="--w:78%"></div></div>
+                <span class="scale-value">8,4 × 10<sup>13</sup> J</span>
+            </div>
+            <div class="scale-row">
+                <span class="scale-label">Tsar Bomba</span>
+                <div class="scale-track"><div class="scale-bar scale-bar--max" style="--w:100%"></div></div>
+                <span class="scale-value">2,1 × 10<sup>15</sup> J</span>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr><th>Evento</th><th>Energia (TNT)</th><th>Energia (J)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Tsar Bomba</td><td>50 Megatons</td><td>2,1 × 10<sup>15</sup></td></tr>
+                <tr><td>Teste Trinity</td><td>20 Kilotons</td><td>8,4 × 10<sup>13</sup></td></tr>
+                <tr><td>1 núcleo de deutério</td><td>—</td><td>3,2 × 10<sup>-19</sup></td></tr>
+            </tbody>
+        </table>
+        <p class="note">Seriam necessários aproximadamente <strong>6,56 × 10<sup>34</sup></strong> núcleos de deutério fundindo para igualar a energia da Tsar Bomba.</p>
+    </section>
+
+    <section id="interatividade" class="card console">
+        <span class="tag">Simulador</span>
+        <h2>Console de energia</h2>
+        <p>Informe quantos núcleos de deutério sofrem fusão e veja a energia total liberada.</p>
+        <div class="console-panel">
+            <label for="nucleo-input">Número de núcleos de deutério</label>
+            <input type="number" id="nucleo-input" placeholder="ex: 6.56e34" min="1">
+            <button onclick="calcularEnergia()">Calcular energia</button>
+            <p id="resultado" class="readout"></p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Energia de Fusão Nuclear do Hidrogênio Pesado</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
